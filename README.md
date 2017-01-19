@@ -5,4 +5,19 @@ This project aims at compressing a DNN trained with [KALDI ASR-toolikt]( http://
 
 # How to use?
 The project is made so that the lease possible changes need to be made in the Kaldi set up:
-* Download [Kaldi](https://github.com/kaldi-asr/kaldi)
+  
+  1. Download [Kaldi](https://github.com/kaldi-asr/kaldi)
+  
+  2. Prior to installing, you need to add a method (which is getter) to the Nnet class in /kaldi/src/nnet2/nnet-nnet.h:
+      '''
+      class Nnet{
+  
+      public:
+  
+      std::vector<Component*> & GetComponentPure() {
+      return components_;
+      }
+     '''
+    
+    
+    
