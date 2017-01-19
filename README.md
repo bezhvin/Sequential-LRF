@@ -8,16 +8,23 @@ The project is made so that the lease possible changes need to be made in the Ka
   
   1. Download [Kaldi](https://github.com/kaldi-asr/kaldi)
   
-  2. Prior to installing, you need to add a method (which is getter) to the Nnet class in /kaldi/src/nnet2/nnet-nnet.h:
-      '''
+2. Prior to installing, you need to add a method (which is a getter) to the Nnet class in /kaldi/src/nnet2/nnet-nnet.h:
+
+      ```c
+      // nnet2/nnet-nnet.h
+      .
+      .
+      .
       class Nnet{
-  
       public:
-  
       std::vector<Component*> & GetComponentPure() {
       return components_;
       }
-     '''
+      .
+      .
+      .
+      } // End of class Nnet
+     ```
     
     
     
