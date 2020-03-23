@@ -16,10 +16,6 @@ void  LimitRankOfLayer2(int32 dim, int32 comp_id) {
   AffineComponent *a = NULL, *b = NULL,
         *c = dynamic_cast<AffineComponent*>(component2_[comp_id]); 
    if (c != NULL) {
-  
-
-      
- 
       c->LimitRank(dim, &a, &b);
       delete c;
       component2_[comp_id] = a;
@@ -51,14 +47,7 @@ void  LimitRankOfLayer2(int32 dim, int32 comp_id) {
        exit(1);
       }
 
-
-   
   }; // END OF CLASS SEQ
-
-
-
-
-
   } // end of namespace nnet2
   } // end of namespace kaldi
  
